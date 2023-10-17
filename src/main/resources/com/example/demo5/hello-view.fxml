@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.demo5.HelloController">
+    <padding>
+        <Insets bottom="10" left="25" right="25" top="25" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Tic-Tac-Toe" GridPane.columnIndex="1">
+      <font>
+         <Font name="Calibri Bold" size="18.0" />
+      </font></Label>
+    <Label fx:id="Text" text="Enter the size " GridPane.rowIndex="2">
+      <font>
+         <Font name="System Italic" size="12.0" />
+      </font></Label>
+
+    <TextField fx:id="Form" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+    <Button onAction="#MakeBoard" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
