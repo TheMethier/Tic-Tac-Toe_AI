@@ -79,8 +79,6 @@ public class BoardController {
         stage.setScene(scene);
         stage.show();
         try {
-
-
             start(board);
         } catch (FileNotFoundException e) {
 
@@ -140,12 +138,8 @@ public class BoardController {
                             board.Clear();
                             text.setVisible(true);
                             text.setText("TIE");
-
                         }
-
                     }
-
-
                 }
             };
             box.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);

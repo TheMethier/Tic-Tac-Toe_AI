@@ -21,8 +21,6 @@ public class HelloController  {
     private Label Text;
     private Scene scene;
     private Stage stage;
-
-
     int n;
     int depth;
     @FXML
@@ -42,7 +40,6 @@ public class HelloController  {
 
         }
         FXMLLoader fxmlLoader = new FXMLLoader(BoardController.class.getResource("com/example/demo5/Board.fxml"));
-
         fxmlLoader.setLocation(BoardController.class.getResource("Board.fxml"));
         if(n>0) {
             Board board = new Board(n);
@@ -50,9 +47,8 @@ public class HelloController  {
             stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             BoardController.drawTicTacToe(n, stage, board);
         }
-
         else{
-            Text.setText("Zły numer!");
+            Text.setText("Wrong number!");
         }
 
     }

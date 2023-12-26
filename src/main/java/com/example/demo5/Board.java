@@ -1,8 +1,5 @@
 package com.example.demo5;
 
-/**
- *
- */
 public class Board {
     public  int size;
     public  int board[][];
@@ -25,20 +22,18 @@ public class Board {
     }
     public int generateDepth()
     {
-        if(size<3)return 9;
+        if(size<3)
+        return 9;
         else if (size==4) {
             return 6;
-
         } else if (size==5) {
-return 5;
-
+            return 5;
         } else if (size>=6&&size<=7) {
             return 4;
-
         } else if (size>=8&&size<=10) {
             return 3;
         }
-      return 2;
+        return 2;
     }
     public Boolean Win(boolean Who)
     {
@@ -71,30 +66,16 @@ return 5;
             h2=0;
             i++;
         }
-        if(s1== size||s2== size||s3== size||s4== size)return true;
-
-        /*for (int a=0;a< size;a++)
-        {
-            for (int b=0;b<size;b++)
-            {
-                System.out.print(board[a][b]+" ");
-            }
-            System.out.println();
-        }
-        /*    if(s1==board.size||s2==board.size||s3== board.size||s4== board.size)return true;
-         */
-
+        if(s1== size||s2== size||s3== size||s4== size) return true;
         return false;
     }
     public int HowManyEmpty() {
     int r=0;
         for (int a = 0; a < size; a++) {
             for (int b = 0; b < size; b++) {
-                if(board[a][b]==0)r++;
+                if(board[a][b]==0) r++;
             }
-            /*System.out.println();*/
         }
-        /*System.out.println(r);*/
         return r;
     }
 

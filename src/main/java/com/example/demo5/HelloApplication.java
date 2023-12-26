@@ -15,8 +15,7 @@ public class HelloApplication extends Application {
         Parent root= fxmlLoader.load(getClass().getResource("hello-view.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Tic-Tac-Toe");
-        stage.setScene(scene);//Add depth on interface
-
+        stage.setScene(scene);
         stage.show();
     }
 

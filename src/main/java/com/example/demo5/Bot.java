@@ -1,14 +1,11 @@
 package com.example.demo5;
-
 import java.util.SortedMap;
 
 public class Bot {
     public int minimax(Board board, int depth,int alfa,int beta,boolean Maxplayer)
     {
-
         if(depth>0) {
             if (!board.Win(true) && board.HowManyEmpty() == 0) {
-
                 return 4;
             }
             if (Maxplayer) {
@@ -54,10 +51,10 @@ public class Bot {
         }
     }
 
-    public Move ShowTheBestMove(Board board) {
+    public Move ShowTheBestMove(Board board)
+     {
         int bestval = -10000000;
         int a = 0, b = 0;
-        System.out.println(board.generateDepth());
         for (int i = 0; i < board.size; i++) {
             for (int j = 0; j < board.size; j++) {
                 if (board.board[i][j] == 0) {
@@ -76,7 +73,6 @@ public class Bot {
             }
         }
         board.board[a][b]=-1;
-
         System.out.println("____Best_Move____");
         for (int k = 0; k < board.size; k++) {
             for (int o = 0; o < board.size; o++) {
